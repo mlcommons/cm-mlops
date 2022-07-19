@@ -43,5 +43,26 @@ You can list reusable automations as follows:
 $ cm find automation
 ```
 
+You can now list available MLOps automation scripts as follows:
+```bash
+$ cm list script
+```
+
+You can run any portable and reusable MLOps automation script as follows:
+```bash
+$ cm run script {CM script alias or UID}
+```
+
 
 *More to come soon ...*
+
+
+## Check tutorials
+
+TBD
+
+
+# Contacts
+
+* [Grigori Fursin](https://cKnowledge.io/@gfursin)
+* [Arjun Suresh](https://www.linkedin.com/in/arjunsuresh)

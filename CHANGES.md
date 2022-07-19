@@ -1,8 +1,13 @@
-# 0220718
+# 20220719
+ * moved relatively stable MLOps automation scripts here
+
+# 20220718
  * fixed local_env_keys in get-python3
  * added new_env_only_keys to meta to specify which env to keep
  * fixed problem with adding tags from the selected script during caching
  * added --skip-compile and --skip-run to script (converted to env CM_SKIP_COMPILE and CM_SKIP_RUN)
+ * fixed local_env_keys in get-python3
+ * added new_env_only_keys to get-python3
 
 # 20220713
  * added local_env_keys to meta
@@ -12,10 +17,12 @@
  * major script refactoring to support cache tags update from deps
  * fixed version min/max propagations in deps
  * improvements to support tags from deps
+ * added tags from deps (python, llvm)
 
 # 20220708
  * various fixes to handle versions (min/max/default)
  * various fixes to avoid contamination of ENV from other scripts
+ * various fixes to handle versions (min/max/default)
 
 # 20220705
  * fixes for remembered selections
@@ -26,6 +33,7 @@
  * added the possibilty to update deps from pre/post processing
  * added --extra-cache-tags and --name for "cm run script"
  * added prototype of selection caching
+ * fixed get-python-venv
 
 # 20220701
  * added dummy "cm test script"
@@ -73,7 +81,6 @@
  * updated "variations" logic in "script"!
    meta['default_variation'] (str): only one of many
    meta['default_variations'] (list): multiple choices
-
  * deprecated "ic" automation. Use "script" instead!
 
 # 20220607
@@ -86,6 +93,7 @@
  * added "deps" to variations to be merged with the list of current deps
  * added --input and --output for cm run script converted to env CM_INPUT and CM_OUTPUT
    useful to create interactive CM scripts to process files
+ * Added prototype-test-deps-variations-tags to play with deps, variations, tags
 
 # 20220605
  * clean tmp files in "script" automation by default and keep them using --dirty flag
@@ -93,12 +101,16 @@
 # 20220603
  * added "skip" and "deps" to postprocess to call other scripts.
    For example call install LLVM if detect LLVM fails...
-
  * added "script" automation to substitute less intuitive "ic"
+ * Improved LLVM detection and installation
+ * Added example of image corner detection
+ * Added updated script entries
 
 # 20220601
  * added version, path, skip_install and post_deps to IC 
  * added --new to IC to detect new components
+ * Updating mechanisms to install and/or detect LLVM
+ * added support to install prebuilt LLVM for Linux, MacOs, Windows
 
 # 20220530
  * updated ic automation to read tmp-run-state.json 
@@ -119,4 +131,8 @@
  * Record env.sh in "installed artifacts even if bat file is not executed
  * Fixed experiment directory naming on Windows
  * Added "cm version ic" (#233)
-
+ * Added prototype of ic::prototype-get-ml-model-resnet50-onnx with variations
+ * Added prototype of ic::prototype-get-imagenet-val with variations
+ * Added prototype of ic::prototype-get-imagenet-aux with variations
+ * Added prototype of ic::prototype-get-llvm
+ * Added prototype of ic::prototype-get-tvm
