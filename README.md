@@ -1,4 +1,4 @@
-# CM repository to enable more determinstic, portable and reproducible MLOps
+# CM (aka CK2) repository to enable more determinstic, portable and reproducible MLOps
 
 [![CM repository](https://img.shields.io/badge/Collective%20Mind-compatible-blue)](https://github.com/mlcommons/ck/tree/master/cm)
 [![CM artifact](https://img.shields.io/badge/Artifact-automated%20and%20reusable-blue)](https://github.com/mlcommons/ck/tree/master/cm)
